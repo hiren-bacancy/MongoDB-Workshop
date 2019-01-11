@@ -6,7 +6,7 @@ const url = 'mongodb://localhost:27017/learnyoumongo'
 mongo.connect(url, function(err, db) {
   let dbo = db.db("learnyoumongo");
   if (err) throw err
-  var parrots = dbo.collection('parrots')
+  let parrots = dbo.collection('parrots')
   parrots.find({
     age: {
       $gt: +age
